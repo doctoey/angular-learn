@@ -1,0 +1,11 @@
+<p>action-bar works!</p>
+<!-- ng generate component action-bar เป็นคำสั่งสร้าง component -->
+
+<div>
+    <button (click)="decreaseValue()"> - </button>
+    <!-- <input #valueforplus type="text" value="0"> -->
+    <input #valueforplus type="text" [value]="counter">
+    <!-- property binding -->
+    <!-- <button (click)="increaseValue(valueforplus.value)" > + </button> -->
+    <button (click)="increaseValue()" > + </button>
+</div>
