@@ -46,6 +46,6 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <div>
   <button type="button" (click)="testClick()">testEventBinding</button>
 
-  <app-action-bar (numberChange)="testNumberChange()" [step]="5" ></app-action-bar>
-  <app-action-bar (numberChange)="testNumberChange()" [step]="10" ></app-action-bar>
+  <app-action-bar (numberChange)="testNumberChange($event)" [step]="5" ></app-action-bar>
+  <app-action-bar (numberChange)="testNumberChange($event)" [step]="10" ></app-action-bar>
 </div>

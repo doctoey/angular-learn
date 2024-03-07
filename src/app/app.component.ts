@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -40,8 +40,8 @@ export class AppComponent {
     console.log("test click");
   }
 
-  testNumberChange() {
-    console.log("test number change");
+  testNumberChange(value: number) {
+    console.log("test number change : ", value);
   }
 
 }

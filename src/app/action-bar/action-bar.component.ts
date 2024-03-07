@@ -26,7 +26,7 @@ export class ActionBarComponent {
     if (this.counter + this.step <= 100) {
       // กันว่าไม่ให้เกิน 100 บวกยังไงก็ไม่เกิน
       this.counter = this.counter + this.step;
-      this.numberChange.emit()
+      this.numberChange.emit(this.counter)
     }
   }
 
@@ -34,7 +34,7 @@ export class ActionBarComponent {
     if (this.counter - this.step >= 0 ) {
       // กันว่าไม่ให้ลงต่ำกว่า 0 ลบยังไงก็ไม่ต่ำกว่า 0
     this.counter = this.counter - this.step;
-    this.numberChange.emit()
+    this.numberChange.emit(this.counter)
     }
   }
 }
