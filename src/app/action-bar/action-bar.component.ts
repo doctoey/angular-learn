@@ -20,11 +20,16 @@ export class ActionBarComponent {
   // }
 
   increaseValue() {
-    this.counter++
+    if (this.counter + 1 < 10) {
+      // กันว่าไม่ให้เกิน 10 บวกยังไงก็ไม่เกิน
+      this.counter++;
+    }
   }
 
   decreaseValue() {
-    this.counter--
+    if (this.counter-1 >= 0 ) {
+      // กันว่าไม่ให้ลงต่ำกว่า 0 ลบยังไงก็ไม่ต่ำกว่า 0
+    this.counter--;
+    }
   }
-
 }
