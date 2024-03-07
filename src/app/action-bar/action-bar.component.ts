@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-action-bar',
@@ -12,6 +12,7 @@ export class ActionBarComponent {
   value = 0;
 
   @Input() step:number = 1;
+  @Output() numberChange = new EventEmitter<number>();
 
   // increaseValue(value: string) {
   //   this.value = Number(value) + 1;
@@ -25,6 +26,7 @@ export class ActionBarComponent {
     if (this.counter + this.step <= 100) {
       // กันว่าไม่ให้เกิน 100 บวกยังไงก็ไม่เกิน
       this.counter = this.counter + this.step;
+      this.numberChange.emit()
     }
   }
 
@@ -32,6 +34,7 @@ export class ActionBarComponent {
     if (this.counter - this.step >= 0 ) {
       // กันว่าไม่ให้ลงต่ำกว่า 0 ลบยังไงก็ไม่ต่ำกว่า 0
     this.counter = this.counter - this.step;
+    this.numberChange.emit()
     }
   }
 }

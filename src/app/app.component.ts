@@ -31,9 +31,17 @@ export class AppComponent {
 
   calbuffet(value: string) {
     // this.value = value
-    
+
     const price = Number(value)
     this.value = (price*3)/4
+  }
+
+  testClick() {
+    console.log("test click");
+  }
+
+  testNumberChange() {
+    console.log("test number change");
   }
 
 }
