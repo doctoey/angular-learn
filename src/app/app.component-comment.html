@@ -31,3 +31,19 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
   <button (click)="calbuffet(priceBufferInput.value)">คำนวน</button>
   <p>คนละ {{value}}  บาท</p>
 </div>
+
+<div>
+  <app-action-bar [step]="5"></app-action-bar>
+  <app-action-bar [step]="10" ></app-action-bar>
+</div>
+
+<p>clip mai ja</p>
+<br>
+<br>
+
+<div>
+  <button type="button" (click)="testClick()">testEventBinding</button>
+
+  <app-action-bar (numberChange)="testNumberChange($event)" [step]="5" ></app-action-bar>
+  <app-action-bar (numberChange)="testNumberChange($event)" [step]="10" ></app-action-bar>
+</div>

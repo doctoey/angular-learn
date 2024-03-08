@@ -22,19 +22,19 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <!-- change title and sleeper <button (click)="changenametosakura("sakura")"> changeTitleAndSleeper </button> -->
 
 
-<div> มา 4 จ่าย 3 </div>
-<div>
+<!-- <div> มา 4 จ่าย 3 </div>
+<div> -->
   <!-- Template Reference Variable #priceBufferInput -->
   <!-- Template Reference Variable (หรือ #variableName) ใน Angular ใช้เพื่อเก็บ reference ของ element ใน template ของ Angular ซึ่งจะช่วยให้คุณสามารถเข้าถึง element นั้นๆ จาก code ของ Angular ได้ โดยไม่จำเป็นต้องใช้ Selector  -->
-  <input #priceBufferInput type="text" placeholder="ราคาจ้า">
+  <!-- <input #priceBufferInput type="text" placeholder="ราคาจ้า"> -->
   <!-- ไม่ต้องตั้ง default value ก็ได้ <input #priceBufferInput value="399" type="text" placeholder="ราคาจ้า"> -->
-  <button (click)="calbuffet(priceBufferInput.value)">คำนวน</button>
+  <!-- <button (click)="calbuffet(priceBufferInput.value)">คำนวน</button>
   <p>คนละ {{value}}  บาท</p>
-</div>
+</div> -->
 
 
 
-<div>
+<!-- <div>
   <app-action-bar [step]="5"></app-action-bar>
   <app-action-bar [step]="10" ></app-action-bar>
 </div>
@@ -48,4 +48,13 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 
   <app-action-bar (numberChange)="testNumberChange($event)" [step]="5" ></app-action-bar>
   <app-action-bar (numberChange)="testNumberChange($event)" [step]="10" ></app-action-bar>
-</div>
+</div> -->
+
+<!-- property binding ปกติ ใส่ '' ด้านในด้วย -->
+<app-max-min-meter [minLabel]="'myMinLabel123'" [maxLabel]="'myMaxLabel123'"></app-max-min-meter>
+
+<!-- ไม่ใส่ '' เลยมอง myMinLabel เป็นตัวแปรตัวแปรนึง  -->
+<app-max-min-meter [minLabel]="appMinLabel" [maxLabel]="appMaxLabel"></app-max-min-meter>
+
+<!-- property binding กำหนดค่าตายตัวรูปแบบ string ให้กับ property -->
+<app-max-min-meter minLabel="myMinLabel" maxLabel="myMaxLabel"></app-max-min-meter>

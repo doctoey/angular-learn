@@ -44,4 +44,7 @@ export class AppComponent {
     console.log("test number change : ", value);
   }
 
+  appMinLabel = 'MyappMinLabel';
+  appMaxLabel = 'MyappMaxLabel';
+
 }
