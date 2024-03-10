@@ -55,4 +55,9 @@ export class AppComponent {
     console.log("doAppMaxChange : ", value);
   }  
 
+
+
+  squareHeight = 100;
+  squareWidth = 200;
+
 }

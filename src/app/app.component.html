@@ -51,13 +51,34 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 </div> -->
 
 <!-- property binding ปกติ ใส่ '' ด้านในด้วย -->
-<app-max-min-meter [minLabel]="'myMinLabel123'" [maxLabel]="'myMaxLabel123'"
+<!-- <app-max-min-meter [minLabel]="'myMinLabel123'" [maxLabel]="'myMaxLabel123'"
 (minChange)="doAppMinChange($event)"
 (maxChange)="doAppMaxChange($event)"
-></app-max-min-meter>
+></app-max-min-meter> -->
 
 <!-- ไม่ใส่ '' เลยมอง myMinLabel เป็นตัวแปรตัวแปรนึง  -->
-<app-max-min-meter [minLabel]="appMinLabel" [maxLabel]="appMaxLabel"></app-max-min-meter>
+<!-- <app-max-min-meter [minLabel]="appMinLabel" [maxLabel]="appMaxLabel"></app-max-min-meter> -->
 
 <!-- property binding กำหนดค่าตายตัวรูปแบบ string ให้กับ property -->
-<app-max-min-meter minLabel="myMinLabel" maxLabel="myMaxLabel"></app-max-min-meter>
+<!-- <app-max-min-meter minLabel="myMinLabel" maxLabel="myMaxLabel"></app-max-min-meter> -->
+
+
+<app-square-flex
+[divHeight]="squareHeight"
+[divWidth]="squareWidth"
+></app-square-flex>
+
+<div>
+  <div>
+    width :
+    <button type="button" (click)="squareWidth=50">50px</button>
+    <button type="button" (click)="squareWidth=100">100px</button>
+    <button type="button" (click)="squareWidth=150">150px</button>
+  </div>
+  <div>
+    height :
+    <button type="button" (click)="squareHeight=50">50px</button>
+    <button type="button" (click)="squareHeight=100">100px</button>
+    <button type="button" (click)="squareHeight=150">150px</button>
+  </div>
+</div>
