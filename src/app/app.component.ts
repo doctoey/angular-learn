@@ -66,4 +66,6 @@ export class AppComponent {
 
   activate: boolean = false;
 
+
+  customerList: string[] = ['toey', 'toeyja', 'toeytoey', 'toeytoeytoey'];
 }
