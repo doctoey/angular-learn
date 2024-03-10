@@ -51,7 +51,10 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 </div> -->
 
 <!-- property binding ปกติ ใส่ '' ด้านในด้วย -->
-<app-max-min-meter [minLabel]="'myMinLabel123'" [maxLabel]="'myMaxLabel123'"></app-max-min-meter>
+<app-max-min-meter [minLabel]="'myMinLabel123'" [maxLabel]="'myMaxLabel123'"
+(minChange)="doAppMinChange($event)"
+(maxChange)="doAppMaxChange($event)"
+></app-max-min-meter>
 
 <!-- ไม่ใส่ '' เลยมอง myMinLabel เป็นตัวแปรตัวแปรนึง  -->
 <app-max-min-meter [minLabel]="appMinLabel" [maxLabel]="appMaxLabel"></app-max-min-meter>

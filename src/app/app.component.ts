@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -46,5 +46,13 @@ export class AppComponent {
 
   appMinLabel = 'MyappMinLabel';
   appMaxLabel = 'MyappMaxLabel';
+
+  doAppMinChange(value: number) {
+    console.log("doAppMinChange : ", value);
+  }
+  
+  doAppMaxChange(value: number) {
+    console.log("doAppMaxChange : ", value);
+  }  
 
 }

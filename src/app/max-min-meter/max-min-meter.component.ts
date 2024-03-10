@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-max-min-meter',
@@ -9,5 +9,15 @@ export class MaxMinMeterComponent {
   @Input() minLabel = 'minLabel';
   @Input() maxLabel = 'maxLabel';
 
+  @Output() minChange = new EventEmitter();
+  @Output() maxChange = new EventEmitter();
+
+  doMinChange(value: number) {
+    this.minChange.emit(value);
+  }
+  
+  doMaxChange(value: number) {
+    this.maxChange.emit(value);
+  }
   
 }
