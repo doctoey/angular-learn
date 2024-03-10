@@ -46,8 +46,8 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <div>
   <button type="button" (click)="testClick()">testEventBinding</button>
 
-  <app-action-bar (numberChange)="testNumberChange($event)" [step]="5" ></app-action-bar>
-  <app-action-bar (numberChange)="testNumberChange($event)" [step]="10" ></app-action-bar>
+  <app-action-bar (numberChange)="testnumberChange($event)" [step]="5" ></app-action-bar>
+  <app-action-bar (numberChange)="testnumberChange($event)" [step]="10" ></app-action-bar>
 </div> -->
 
 <!-- property binding ปกติ ใส่ '' ด้านในด้วย -->
@@ -63,7 +63,7 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <!-- <app-max-min-meter minLabel="myMinLabel" maxLabel="myMaxLabel"></app-max-min-meter> -->
 
 
-<app-square-flex
+<!-- <app-square-flex
 [divHeight]="squareHeight"
 [divWidth]="squareWidth"
 ></app-square-flex>
@@ -81,4 +81,14 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
     <button type="button" (click)="squareHeight=100">100px</button>
     <button type="button" (click)="squareHeight=150">150px</button>
   </div>
-</div>
+</div> -->
+
+
+<!-- ปกติ -->
+<!-- <app-action-bar [counter]="appCounter" (counterChange)="appCounter = $event"></app-action-bar>
+<app-square-flex [divWidth]="appCounter"></app-square-flex> -->
+
+<!-- two way binding -->
+<app-action-bar [(counter)]="appCounter"
+[step]="10"></app-action-bar>
+<app-square-flex [divWidth]="appCounter"></app-square-flex>

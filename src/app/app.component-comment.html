@@ -44,8 +44,8 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <div>
   <button type="button" (click)="testClick()">testEventBinding</button>
 
-  <app-action-bar (numberChange)="testNumberChange($event)" [step]="5" ></app-action-bar>
-  <app-action-bar (numberChange)="testNumberChange($event)" [step]="10" ></app-action-bar>
+  <app-action-bar (numberChange)="testnumberChange($event)" [step]="5" ></app-action-bar>
+  <app-action-bar (numberChange)="testnumberChange($event)" [step]="10" ></app-action-bar>
 </div>
 
 
@@ -61,3 +61,23 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 
 <!-- property binding กำหนดค่าตายตัวรูปแบบ string ให้กับ property -->
 <app-max-min-meter minLabel="myMinLabel" maxLabel="myMaxLabel"></app-max-min-meter>
+
+<app-square-flex
+[divHeight]="squareHeight"
+[divWidth]="squareWidth"
+></app-square-flex>
+
+<div>
+  <div>
+    width :
+    <button type="button" (click)="squareWidth=50">50px</button>
+    <button type="button" (click)="squareWidth=100">100px</button>
+    <button type="button" (click)="squareWidth=150">150px</button>
+  </div>
+  <div>
+    height :
+    <button type="button" (click)="squareHeight=50">50px</button>
+    <button type="button" (click)="squareHeight=100">100px</button>
+    <button type="button" (click)="squareHeight=150">150px</button>
+  </div>
+</div>

@@ -40,7 +40,7 @@ export class AppComponent {
     console.log("test click");
   }
 
-  testNumberChange(value: number) {
+  testnumberChange(value: number) {
     console.log("test number change : ", value);
   }
 
@@ -59,5 +59,8 @@ export class AppComponent {
 
   squareHeight = 100;
   squareWidth = 200;
+
+
+  appCounter = 20;
 
 }
