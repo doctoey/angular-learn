@@ -92,3 +92,11 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <app-action-bar [(counter)]="appCounter"
 [step]="10"></app-action-bar>
 <app-square-flex [divWidth]="appCounter"></app-square-flex>
+
+<!-- *ngIf ไม่แสดง => structural directive-->
+<!-- false ทำลาย view => true สร้าง view -->
+<!-- <div *ngIf="true"> -->
+<div *ngIf="activate">
+  <app-action-bar ></app-action-bar>
+</div>
+<button type="button" (click)="activate=true" >activate</button>

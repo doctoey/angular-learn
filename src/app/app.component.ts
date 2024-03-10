@@ -63,4 +63,7 @@ export class AppComponent {
 
   appCounter = 20;
 
+
+  activate: boolean = false;
+
 }
