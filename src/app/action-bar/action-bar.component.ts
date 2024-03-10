@@ -14,6 +14,8 @@ export class ActionBarComponent {
   @Input() step:number = 1;
   @Output() counterChange = new EventEmitter<number>();
 
+  @Input() inputDisplay = true;
+
   // increaseValue(value: string) {
   //   this.value = Number(value) + 1;
   // }
@@ -37,4 +39,6 @@ export class ActionBarComponent {
     this.counterChange.emit(this.counter)
     }
   }
+
+
 }

@@ -89,14 +89,30 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <app-square-flex [divWidth]="appCounter"></app-square-flex> -->
 
 <!-- two way binding -->
-<app-action-bar [(counter)]="appCounter"
+<!-- <app-action-bar [(counter)]="appCounter"
 [step]="10"></app-action-bar>
-<app-square-flex [divWidth]="appCounter"></app-square-flex>
+<app-square-flex [divWidth]="appCounter"></app-square-flex> -->
 
 <!-- *ngIf ไม่แสดง => structural directive-->
 <!-- false ทำลาย view => true สร้าง view -->
 <!-- <div *ngIf="true"> -->
-<div *ngIf="activate">
-  <app-action-bar ></app-action-bar>
-</div>
-<button type="button" (click)="activate=true" >activate</button>
+<!-- <div *ngIf="activate else elseTemplate"> -->
+  <!-- activate true จะสร้าง action-bar -->
+  <!-- <app-action-bar ></app-action-bar> -->
+<!-- </div> -->
+<!-- <ng-template #elseTemplate> -->
+  <!-- activate false จะสร้าง div activate now-->
+  <!-- <div>
+    activate now!
+  </div>
+</ng-template>
+<button type="button" (click)="activate=true" >activate</button> -->
+
+
+<app-action-bar [inputDisplay]="false"></app-action-bar>
+<app-action-bar [inputDisplay]="true"></app-action-bar>
+
+
+
+
+

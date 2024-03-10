@@ -4,8 +4,15 @@
 <div>
     <button (click)="decreaseValue()"> - </button>
     <!-- <input #valueforplus type="text" value="0"> -->
-    <input #valueforplus type="text" [value]="counter">
+    <input #valueforplus type="text" [value]="counter" *ngIf="inputDisplay else elseTemplate">
     <!-- property binding -->
     <!-- <button (click)="increaseValue(valueforplus.value)" > + </button> -->
+    <ng-template #elseTemplate>
+        <span style="font-size: 20px;
+            font-weight: bold;
+            margin: 0 5px;">
+            {{counter}}
+        </span>
+    </ng-template>
     <button (click)="increaseValue()" > + </button>
 </div>
