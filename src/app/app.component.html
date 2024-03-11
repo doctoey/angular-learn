@@ -114,13 +114,13 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 
 
 <!-- interpolation -->
-{{ customerList[0] }}
-{{ customerList }}
+<!-- {{ customerList[0] }}
+{{ customerList }} -->
 
 <!-- structural directive -->
 <!-- *ngFor --> <!-- *ngIf ก็ใช่ -->
 
-<ul>
+<!-- <ul>
   <li *ngFor="let customer of customerList; let i = index ">
     {{ customer }}
     <button type="button" (click)="spliceCustomer(i)">remove</button>
@@ -128,4 +128,7 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 </ul>
 
 <button type="button" (click)="pushCustomer()">pushCustomer</button>
-<button type="button" (click)="unshiftCustomer()">unshiftCustomer</button>
+<button type="button" (click)="unshiftCustomer()">unshiftCustomer</button> -->
+
+
+<app-test-request-get></app-test-request-get>
