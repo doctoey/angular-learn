@@ -16,7 +16,18 @@ export class TestRequestGetComponent {
 
   //rxjs
   ngOnInit(): void {
-    this.http.get<Book[]>('https://www.anapioficeandfire.com/api/books')
+    // ทำงานเลยเมื่อ component ถูกสร้างขึ้นมา
+    // this.http.get<Book[]>('https://www.anapioficeandfire.com/api/books')
+    // .subscribe(response=>{
+    //   console.log(response, 'response');
+    //   this.bookList = response;
+    // });
+  }
+  
+  //search
+  //ทำงานเมื่อมีการค้นหา (กดปุ่ม search)
+  searchBookList(name:string){
+    this.http.get<Book[]>('https://www.anapioficeandfire.com/api/books?name='+name)
     .subscribe(response=>{
       console.log(response, 'response');
       this.bookList = response;
