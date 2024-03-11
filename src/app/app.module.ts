@@ -8,6 +8,9 @@ import { MaxMinMeterComponent } from './max-min-meter/max-min-meter.component';
 import { SquareFlexComponent } from './square-flex/square-flex.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TestRequestModule } from './test-request/test-request.module';
+import {CalendarModule} from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { TestRequestModule } from './test-request/test-request.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    TestRequestModule
+    TestRequestModule,
+    CalendarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
