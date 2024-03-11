@@ -68,4 +68,23 @@ export class AppComponent {
 
 
   customerList: string[] = ['toey', 'toeyja', 'toeytoey', 'toeytoeytoey'];
+
+  //push คือการเพิ่มข้อมูลไปที่ตำแหน่งสุดท้ายของ array
+  pushCustomer() {
+    this.customerList.push('toey'+(this.customerList.length+1))
+  }
+
+  //unshift คือการเพิ่มข้อมูลไปที่ตำแหน่งแรกของ array
+  unshiftCustomer() {
+    this.customerList.unshift('toey'+(this.customerList.length+1))
+  }
+
+  //splice เพิ่มข้อมูลไปที่ตำแหน่งที่เราต้องการ remove นั่นแหละ
+  spliceCustomer(index : number) {
+    this.customerList.splice(index, 1)
+  }
+  //splice(param1, param2, param3)
+  //param1 คือตำแหน่งที่เราต้องการจะเพิ่มข้อมูล
+  //param2 คือจำนวนข้อมูลที่เราต้องการจะลบออก
+  //param3 คือข้อมูลที่เราต้องการจะเพิ่มเข้าไป
 }
