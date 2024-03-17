@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestRequestModule } from './test-request/test-request.module';
 import {CalendarModule} from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
-
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     TestRequestModule,
     CalendarModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

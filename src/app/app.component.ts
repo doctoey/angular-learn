@@ -89,4 +89,23 @@ export class AppComponent {
   //param3 คือข้อมูลที่เราต้องการจะเพิ่มเข้าไป
 
   date1 = new Date();
+
+  products: { name: string, category: string }[] = [
+    {
+      name: 'toey',
+      category: 'toeyja',
+    },
+    {
+      name: 'toeytoey',
+      category: 'toeytoeytoey',
+    },
+    {
+      name: 'toeytoeytoey',
+      category: 'toeytoeytoeytoey',
+    },
+    {
+      name: 'toeytoeytoeytoey',
+      category: 'toeytoeytoeytoeytoey',
+    },
+  ];
 }

@@ -131,3 +131,32 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <button type="button" (click)="pushCustomer()">pushCustomer</button>
 <button type="button" (click)="unshiftCustomer()">unshiftCustomer</button>
 
+
+<app-test-request-get></app-test-request-get>
+
+  <div class="ui-g-12 ui-md-4">
+      <h3>Basic</h3>
+      <p-calendar [(ngModel)]="date1"></p-calendar>
+  </div>
+
+
+
+
+  <p-table [value]="products">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+        </tr>
+    </ng-template>
+    <!-- ส่วนนี้คือการวนลูปข้อมูลที่ได้มาแสดงผล -->
+    <!-- let ใช้คู่ ng-template -->
+    <!-- let-product อยู่ใน object ด้านบน -->
+    <!-- let-product อะ จะชื่ออะไรก็ได้ แต่ตอนเข้าถึงก็ เปลี่ยนให้ถูกด้วย -->
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+        </tr>
+    </ng-template>
+</p-table>
