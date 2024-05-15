@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run linting and formatting checks before pushing
+
+echo "Running formatting checks..."
+
+# Run formatting
+prettier --check "components/**/*.tsx" "pages/**/*.tsx" "styles/**/*.scss" || exit 1
+
+echo "formatting checks passed."
+
+yarn format:fix
+
