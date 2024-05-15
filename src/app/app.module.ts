@@ -11,6 +11,7 @@ import { TestRequestModule } from './test-request/test-request.module';
 import {CalendarModule} from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
+import { ShoppingModule } from './shopping/shopping.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TableModule } from 'primeng/table';
     TestRequestModule,
     CalendarModule,
     FormsModule,
-    TableModule
+    TableModule,
+    ShoppingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
