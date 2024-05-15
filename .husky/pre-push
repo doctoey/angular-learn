@@ -6,7 +6,7 @@
 echo "Running formatting checks..."
 
 # Run formatting
-prettier --check \"**/*.html\" \"**/*.scss\" \"**/*.ts\"" || exit 1
+prettier --check "**/*.html" "**/*.scss" "**/*.ts" || exit 1
 
 echo "formatting checks passed."
 
