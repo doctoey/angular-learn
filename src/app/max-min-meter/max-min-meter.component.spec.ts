@@ -8,7 +8,7 @@ describe('MaxMinMeterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MaxMinMeterComponent]
+      declarations: [MaxMinMeterComponent],
     });
     fixture = TestBed.createComponent(MaxMinMeterComponent);
     component = fixture.componentInstance;

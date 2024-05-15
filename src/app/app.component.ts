@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   // title = 'angular-learner';
@@ -26,62 +26,56 @@ export class AppComponent {
   //   this.name = name
   // }
 
-
   value = 0;
 
   calbuffet(value: string) {
     // this.value = value
 
-    const price = Number(value)
-    this.value = (price*3)/4
+    const price = Number(value);
+    this.value = (price * 3) / 4;
   }
 
   testClick() {
-    console.log("test click");
+    console.log('test click');
   }
 
   testnumberChange(value: number) {
-    console.log("test number change : ", value);
+    console.log('test number change : ', value);
   }
 
   appMinLabel = 'MyappMinLabel';
   appMaxLabel = 'MyappMaxLabel';
 
   doAppMinChange(value: number) {
-    console.log("doAppMinChange : ", value);
+    console.log('doAppMinChange : ', value);
   }
-  
+
   doAppMaxChange(value: number) {
-    console.log("doAppMaxChange : ", value);
-  }  
-
-
+    console.log('doAppMaxChange : ', value);
+  }
 
   squareHeight = 100;
   squareWidth = 200;
 
-
   appCounter = 20;
 
-
   activate: boolean = false;
-
 
   customerList: string[] = ['toey', 'toeyja', 'toeytoey', 'toeytoeytoey'];
 
   //push คือการเพิ่มข้อมูลไปที่ตำแหน่งสุดท้ายของ array
   pushCustomer() {
-    this.customerList.push('toey'+(this.customerList.length+1))
+    this.customerList.push('toey' + (this.customerList.length + 1));
   }
 
   //unshift คือการเพิ่มข้อมูลไปที่ตำแหน่งแรกของ array
   unshiftCustomer() {
-    this.customerList.unshift('toey'+(this.customerList.length+1))
+    this.customerList.unshift('toey' + (this.customerList.length + 1));
   }
 
   //splice เพิ่มข้อมูลไปที่ตำแหน่งที่เราต้องการ remove นั่นแหละ
-  spliceCustomer(index : number) {
-    this.customerList.splice(index, 1)
+  spliceCustomer(index: number) {
+    this.customerList.splice(index, 1);
   }
   //splice(param1, param2, param3)
   //param1 คือตำแหน่งที่เราต้องการจะเพิ่มข้อมูล
@@ -90,7 +84,7 @@ export class AppComponent {
 
   date1 = new Date();
 
-  products: { name: string, category: string }[] = [
+  products: { name: string; category: string }[] = [
     {
       name: 'toey',
       category: 'toeyja',
@@ -108,7 +102,4 @@ export class AppComponent {
       category: 'toeytoeytoeytoeytoey',
     },
   ];
-
-
-
 }

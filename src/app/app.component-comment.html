@@ -21,50 +21,61 @@ change name to sakura <button (click)="changenametosakura('sakura')"> changename
 change name to sasa <button (click)="changenametosakura('sasa')"> changename </button> {{ name }} -->
 <!-- change title and sleeper <button (click)="changenametosakura("sakura")"> changeTitleAndSleeper </button> -->
 
-
-<div> มา 4 จ่าย 3 </div>
+<div>มา 4 จ่าย 3</div>
 <div>
   <!-- Template Reference Variable #priceBufferInput -->
   <!-- Template Reference Variable (หรือ #variableName) ใน Angular ใช้เพื่อเก็บ reference ของ element ใน template ของ Angular ซึ่งจะช่วยให้คุณสามารถเข้าถึง element นั้นๆ จาก code ของ Angular ได้ โดยไม่จำเป็นต้องใช้ Selector  -->
-  <input #priceBufferInput type="text" placeholder="ราคาจ้า">
+  <input #priceBufferInput type="text" placeholder="ราคาจ้า" />
   <!-- ไม่ต้องตั้ง default value ก็ได้ <input #priceBufferInput value="399" type="text" placeholder="ราคาจ้า"> -->
   <button (click)="calbuffet(priceBufferInput.value)">คำนวน</button>
-  <p>คนละ {{value}}  บาท</p>
+  <p>คนละ {{value}} บาท</p>
 </div>
 
 <div>
   <app-action-bar [step]="5"></app-action-bar>
-  <app-action-bar [step]="10" ></app-action-bar>
+  <app-action-bar [step]="10"></app-action-bar>
 </div>
 
 <p>clip mai ja</p>
-<br>
-<br>
+<br />
+<br />
 
 <div>
   <button type="button" (click)="testClick()">testEventBinding</button>
 
-  <app-action-bar (numberChange)="testnumberChange($event)" [step]="5" ></app-action-bar>
-  <app-action-bar (numberChange)="testnumberChange($event)" [step]="10" ></app-action-bar>
+  <app-action-bar
+    (numberChange)="testnumberChange($event)"
+    [step]="5"
+  ></app-action-bar>
+  <app-action-bar
+    (numberChange)="testnumberChange($event)"
+    [step]="10"
+  ></app-action-bar>
 </div>
 
-
-
 <!-- property binding ปกติ ใส่ '' ด้านในด้วย -->
-<app-max-min-meter [minLabel]="'myMinLabel123'" [maxLabel]="'myMaxLabel123'"
-(minChange)="doAppMinChange($event)"
-(maxChange)="doAppMaxChange($event)"
+<app-max-min-meter
+  [minLabel]="'myMinLabel123'"
+  [maxLabel]="'myMaxLabel123'"
+  (minChange)="doAppMinChange($event)"
+  (maxChange)="doAppMaxChange($event)"
 ></app-max-min-meter>
 
 <!-- ไม่ใส่ '' เลยมอง myMinLabel เป็นตัวแปรตัวแปรนึง  -->
-<app-max-min-meter [minLabel]="appMinLabel" [maxLabel]="appMaxLabel"></app-max-min-meter>
+<app-max-min-meter
+  [minLabel]="appMinLabel"
+  [maxLabel]="appMaxLabel"
+></app-max-min-meter>
 
 <!-- property binding กำหนดค่าตายตัวรูปแบบ string ให้กับ property -->
-<app-max-min-meter minLabel="myMinLabel" maxLabel="myMaxLabel"></app-max-min-meter>
+<app-max-min-meter
+  minLabel="myMinLabel"
+  maxLabel="myMaxLabel"
+></app-max-min-meter>
 
 <app-square-flex
-[divHeight]="squareHeight"
-[divWidth]="squareWidth"
+  [divHeight]="squareHeight"
+  [divWidth]="squareWidth"
 ></app-square-flex>
 
 <div>
@@ -82,15 +93,12 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
   </div>
 </div>
 
-
-
 <!-- ปกติ -->
 <!-- <app-action-bar [counter]="appCounter" (counterChange)="appCounter = $event"></app-action-bar>
 <app-square-flex [divWidth]="appCounter"></app-square-flex> -->
 
 <!-- two way binding -->
-<app-action-bar [(counter)]="appCounter"
-[step]="10"></app-action-bar>
+<app-action-bar [(counter)]="appCounter" [step]="10"></app-action-bar>
 <app-square-flex [divWidth]="appCounter"></app-square-flex>
 
 <!-- *ngIf ไม่แสดง => structural directive-->
@@ -98,28 +106,23 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <!-- <div *ngIf="true"> -->
 <div *ngIf="activate else elseTemplate">
   <!-- activate true จะสร้าง action-bar -->
-  <app-action-bar ></app-action-bar>
+  <app-action-bar></app-action-bar>
 </div>
 <ng-template #elseTemplate>
   <!-- activate false จะสร้าง div activate now-->
-  <div>
-    activate now!
-  </div>
+  <div>activate now!</div>
 </ng-template>
-<button type="button" (click)="activate=true" >activate</button>
-
+<button type="button" (click)="activate=true">activate</button>
 
 <app-action-bar [inputDisplay]="false"></app-action-bar>
 <app-action-bar [inputDisplay]="true"></app-action-bar>
 
-
-
 <!-- interpolation -->
-{{ customerList[0] }}
-{{ customerList }}
+{{ customerList[0] }} {{ customerList }}
 
 <!-- structural directive -->
-<!-- *ngFor --> <!-- *ngIf ก็ใช่ -->
+<!-- *ngFor -->
+<!-- *ngIf ก็ใช่ -->
 
 <ul>
   <li *ngFor="let customer of customerList; let i = index ">
@@ -131,32 +134,28 @@ change name to sasa <button (click)="changenametosakura('sasa')"> changename </b
 <button type="button" (click)="pushCustomer()">pushCustomer</button>
 <button type="button" (click)="unshiftCustomer()">unshiftCustomer</button>
 
-
 <app-test-request-get></app-test-request-get>
 
-  <div class="ui-g-12 ui-md-4">
-      <h3>Basic</h3>
-      <p-calendar [(ngModel)]="date1"></p-calendar>
-  </div>
+<div class="ui-g-12 ui-md-4">
+  <h3>Basic</h3>
+  <p-calendar [(ngModel)]="date1"></p-calendar>
+</div>
 
-
-
-
-  <p-table [value]="products">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-        </tr>
-    </ng-template>
-    <!-- ส่วนนี้คือการวนลูปข้อมูลที่ได้มาแสดงผล -->
-    <!-- let ใช้คู่ ng-template -->
-    <!-- let-product อยู่ใน object ด้านบน -->
-    <!-- let-product อะ จะชื่ออะไรก็ได้ แต่ตอนเข้าถึงก็ เปลี่ยนให้ถูกด้วย -->
-    <ng-template pTemplate="body" let-product>
-        <tr>
-            <td>{{product.name}}</td>
-            <td>{{product.category}}</td>
-        </tr>
-    </ng-template>
+<p-table [value]="products">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+    </tr>
+  </ng-template>
+  <!-- ส่วนนี้คือการวนลูปข้อมูลที่ได้มาแสดงผล -->
+  <!-- let ใช้คู่ ng-template -->
+  <!-- let-product อยู่ใน object ด้านบน -->
+  <!-- let-product อะ จะชื่ออะไรก็ได้ แต่ตอนเข้าถึงก็ เปลี่ยนให้ถูกด้วย -->
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{product.name}}</td>
+      <td>{{product.category}}</td>
+    </tr>
+  </ng-template>
 </p-table>

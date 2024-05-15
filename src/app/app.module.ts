@@ -8,7 +8,7 @@ import { MaxMinMeterComponent } from './max-min-meter/max-min-meter.component';
 import { SquareFlexComponent } from './square-flex/square-flex.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TestRequestModule } from './test-request/test-request.module';
-import {CalendarModule} from 'primeng/calendar';
+import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { ShoppingModule } from './shopping/shopping.module';
@@ -28,9 +28,9 @@ import { ShoppingModule } from './shopping/shopping.module';
     CalendarModule,
     FormsModule,
     TableModule,
-    ShoppingModule
+    ShoppingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

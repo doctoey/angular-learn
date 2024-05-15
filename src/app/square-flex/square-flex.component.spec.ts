@@ -8,7 +8,7 @@ describe('SquareFlexComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SquareFlexComponent]
+      declarations: [SquareFlexComponent],
     });
     fixture = TestBed.createComponent(SquareFlexComponent);
     component = fixture.componentInstance;
